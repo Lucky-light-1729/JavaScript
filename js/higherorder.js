@@ -43,3 +43,25 @@ console.log(userdata.greet());
 //object.keys() --> returns an array of all keys in the object
 //object.values() --> returns an array of all values in the object
 //object.entries() --> returns an array of key-value pairs in the object
+
+const person = {
+    name: "PQRST",
+    age: 30,
+    city: "New York"
+};
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(Object.entries(person));
+
+//object.assign() --> used to merge values from one object to another
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const mergedObj = Object.assign({}, obj1, obj2);
+console.log(mergedObj); 
+console.log('p'); 
+
+//no chne should be allowe in value of object
+//object.freeze() --> used to make an object immutable
+const frozenObj = Object.freeze(obj1);
+frozenObj.a = 10; 
+console.log(frozenObj); 
