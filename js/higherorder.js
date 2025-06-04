@@ -65,3 +65,19 @@ console.log('p');
 const frozenObj = Object.freeze(obj1);
 frozenObj.a = 10; 
 console.log(frozenObj); 
+
+//prototype
+//prototype is a mechanism in JavaScript that allows you to add properties and methods to an object
+function Person(name, age) 
+{
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.greet = function() {
+    console.log("Hello, my name is " + this.name);
+};
+const person1 = new Person("adb", 25);
+person1.greet(); 
+//array fill
+let fillarr= new Array(5).fill("hi");
+console.log(fillarr); 
