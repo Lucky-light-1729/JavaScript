@@ -32,13 +32,14 @@
         <p id="para3">Paragraph</p>
         <span>Span</span>
     </div>
+    <div id="box"></div>
+    <div id="message"></div>
 
     <script >
-        let res12= document.getElementById("para3");
-        let r12next = res12.nextElementSibling;
-        console.log("Next Element: ", r12next);
-        let r12prev = res12.previousElementSibling;
-        console.log("Previous Element: ", r12prev);
+        let newp = document.createElement("p");
+        newp.textContent="this is new para";
+        document.getElementById("inner").after(newp);
+
     </script>
 </body>
 </html>
