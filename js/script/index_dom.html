@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p id="result" class="para1">1. Result will be displayed here</p>
+    <p id="result2" class="para2"><strong>2. Result2</strong> will be displayed here</p>
+    <p id="result3" class="para2"><u>3. Result3</u> will be displayed here</p>
+    <p id="result4" class="para1">4. Result4 will be displayed here</p>
+    <input type ="radio" value="male" name="gender">Male
+    <input type ="radio" value="female" name="gender">Female
+    
+    <div id="outer">
+        <div id="inner">
+            <p>Inner Div</p>
+        </div>
+    </div>
+
+    <div id="child">
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>Para 3</p>
+        <p>Para 4</p>
+    </div>
+
+    <div id="sibling">
+        <h2>heading</h2>
+        <p id="para3">Paragraph</p>
+        <span>Span</span>
+    </div>
+
+    <script >
+        let res12= document.getElementById("para3");
+        let r12next = res12.nextElementSibling;
+        console.log("Next Element: ", r12next);
+        let r12prev = res12.previousElementSibling;
+        console.log("Previous Element: ", r12prev);
+    </script>
+</body>
+</html>
