@@ -230,4 +230,6 @@ function matchString(str, regex)
 {
     return str.match(regex);
 }
+let str18="hello world, hello everyone";
+console.log(matchString(str18, /hello/g)); // Output: ["hello", "hello"]
 

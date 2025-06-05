@@ -27,19 +27,28 @@
         <p>Para 4</p>
     </div>
 
+    <div id="target"></div>
     <div id="sibling">
         <h2>heading</h2>
         <p id="para3">Paragraph</p>
         <span>Span</span>
     </div>
-    <div id="box"></div>
+    <div id="box">
+        <p id="old"> This is a old paragraph</p>
+    </div>
     <div id="message"></div>
+    <ul id="fruits">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
 
-    <script >
-        let newp = document.createElement("p");
-        newp.textContent="this is new para";
-        document.getElementById("inner").after(newp);
-
+    <script>        
+            let newli= document.createElement("li");
+            newli.textContent = "grapres";
+            let list = document.getElementById("fruits");
+            let firstli = list.firstElementChild;
+            list.insertBefore(newli, firstli);
     </script>
 </body>
 </html>

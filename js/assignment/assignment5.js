@@ -59,16 +59,103 @@ output: "HELLO"
 /*
 Section B: Logic-Building Tasks (10 Questions)
 1.Write a function to capitalize the first letter of every word.
+ans:
+    function capitalizeFirstLetter(sentence) 
+    {
+        let array = sentence.split(' ');
+        for (let i = 0; i < array.length; i++) 
+        {
+            array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+        }
+        return array.join(' ');
+    }
 2. Write a function that reverses the words in a sentence (not characters).
+ans:
+    function reverseWords(sentence) 
+    {
+        let reversedWords = sentence.split(' ').reverse().join(' ');
+        return reversedWords;
+    }
 3. Write a function that checks if a given string is palindrome (without using a loop).
+ans:
+    function isPalindrome(str) 
+    {
+        let rev = str.split('').reverse().join('');
+        if (str == rev) 
+        {
+            return true;
+        }
+        return false;
+    }
 4. Write a function to convert "10/06/2025" to "2025-06-10" using string methods only.
+ans:
+    function convertDateFormat(dateStr) 
+    {   
+        let newDateStr = dateStr.split('/').reverse().join('-');
+        return newDateStr;
+    }
 5. Write a function to create a masked phone number (e.g., ******3210).
+ans:
+    function maskPhoneNumber(phoneNumber) 
+    {
+        let maskedPart = phoneNumber.slice(0, -4).replace(/./g, '*');
+        let lastFourDigits = phoneNumber.slice(-4);
+        let maskedPhoneNumber = maskedPart + lastFourDigits;
+        return maskedPhoneNumber;
+    }
 6. Write a function to check if a given email is valid (must contain one @ and one . after @).
+ans:
+    function isValidEmail(email) 
+    {
+        const atIndex = email.indexOf('@');
+        const dotIndex = email.indexOf('.', atIndex);
+        return atIndex > 0 && dotIndex < email.length - 1;
+    }
 7. Write a function to count the number of vowels in a given string (no loop, use match + regex).
-8. Write a function to return the middle character(s) of a string. If even, return 2 chars; if odd, return
-1 char.
+ans:
+    function countVowels(str) 
+    {
+        const matches = str.match(/[aeiouAEIOU]/g);
+        count = matches.length;
+        return count;
+    }
+8. Write a function to return the middle character(s) of a string. If even, return 2 chars; '
+if odd, return 1 char.
+ans:
+    function getMiddleCharacter(str) 
+    {
+        const len = str.length;
+        if (len % 2 == 0) 
+        {
+            return str.slice(len / 2 - 1, len / 2 + 1);
+        } 
+        else 
+        {
+            return str.charAt(Math.floor(len / 2));
+        }
+    }
 9. Write a function to remove all non-alphanumeric characters from a string.
+ans:
+    function removeNonAlpha(str)
+    {
+        let cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '');
+        return cleanedStr;
+    }
 10. Write a function to find the longest word in a sentence using only string methods and split.
+ans:
+    function findLongestWord(sentence)
+    {
+        let words = sentence.split(' ');
+        let longestWord = '';
+        for (let word of words)
+         {
+            if (word.length > longestWord.length) 
+            {
+                longestWord = word;
+            }
+        }
+        return longestWord;
+    }
 */
 /*
 Section C: Trick-Based Deep Output (5 Questions)
