@@ -6,11 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="url" id="link">Link</a>
+    <a href="https://www.linkedin.com/in/anay-agrawal-872b682b3/" id="link">Link</a>
+    <img src="/html/img/img2.jpeg" alt="img" id="img">
+    <input id="user" type="text" placeholder="enter your name">
+
+    <div id="box" class="oldClass"></div>
+    <div id="box2">
+        <p id="para1" style="color: blue;">sfgd fbidfj fjb di</p>
+    </div>
+    <div id="btn" class="primary">Click me</div>
     <script>
-        let anc =document.getElementById("link");
-        let ancres = anc.getAttribute("href");
-        console.log(ancres);
+        let btn=document.getElementById("btn");
+        btn.classList.add("round");
+        btn.classList.remove("primary");
+        btn.classList.toggle("active");
+        console.log(btn.classList.toggle("active"));
     </script>
 </body>
 </html>

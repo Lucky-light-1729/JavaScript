@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">click</button>
+    </div>
+    
+    <button id="btn1" onclick="greet()">click btn1</button>
+
+    <button id="btn2">click btn2</button>
+    <script>
+        function createBox(){
+            let box=document.createElement("div");
+            box.id="box";
+            box.style.cssText="background-color: aqua;height:200px;width:200px;border:2px solid black";
+            document.body.appendChild(box);
+        }
+        function removeBox(){
+            let child = document.getElementById("box");
+            if(child)
+            {
+                child.parentNode.removeChild(child);
+            }
+        }
+
+        let btn=document.getElementById("btn2");
+        btn.addEventListener("click",createBox);
+        
+        setInterval(()=>{
+            btn.removeEventListener("click",createBox);
+            console.log("can remove box now");
+            btn.addEventListener("click",removeBox);
+        },5000);
+
+    </script>
+</body>
+</html>

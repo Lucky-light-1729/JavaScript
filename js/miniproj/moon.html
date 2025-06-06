@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Theme</title>
+  <style>
+    .dark-back {
+      background-color: black;
+      color: white;
+      height: 200px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    .light-back {
+      background-color: white;
+      color: black;
+      height: 200px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    .moon {
+      background-color: white;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .moon-dark {
+      background-color: gray;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn">Toggle</button>
+  <div id="back" class="dark-back">
+    <div id="moon" class="moon"></div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const back = document.getElementById("back");
+    const moon = document.getElementById("moon");
+
+    btn.addEventListener("click", function () {
+      const isDark = back.classList.contains("dark-back");
+
+      if (isDark) 
+      {
+        back.classList.remove("dark-back");
+        back.classList.add("light-back");
+        moon.classList.remove("moon");
+        moon.classList.add("moon-dark");
+      } 
+      else 
+      {
+        back.classList.remove("light-back");
+        back.classList.add("dark-back");
+        moon.classList.remove("moon-dark");
+        moon.classList.add("moon");
+      }
+    });
+  </script>
+</body>
+</html>
