@@ -6,15 +6,454 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="q1">Q1</div>
-    <div id="q2">
-        <p>Q2</p>
-        <p>Q2</p>
-        <p>Q2</p>
-        <p>Q2</p>
+     <!-- Task 1 -->
+    <div id="element1">Original Content</div>
+
+    <!-- Task 2 -->
+    <input type="text" name="grouped" value="One">
+    <input type="text" name="grouped" value="Two">
+
+    <!-- Task 3 -->
+    <a href="https://example.com">Example</a>
+    <a href="https://google.com">Google</a>
+
+    <!-- Task 4 -->
+    <div class="highlight">Item 1</div>
+    <div class="highlight">Item 2</div>
+    <div class="highlight">Item 3</div>
+
+    <!-- Task 5 -->
+    <div class="active">Active Element</div>
+
+    <!-- Task 6 -->
+    <ul>
+        <li class="completed">Task 1</li>
+        <li class="completed">Task 2</li>
+    </ul>
+
+    <!-- Task 7 -->
+    <div id="parentDiv"><button id="btn7">Click to Color Parent</button></div>
+
+    <!-- Task 8 -->
+    <div id="parent8">
+        <div id="first-child"></div>
     </div>
-    <script>
-        
-    </script>
+
+    <!-- Task 9 -->
+    <div>Sibling 1</div>
+    <div id="middle9">Target Element</div>
+    <div>Sibling 2</div>
+
+    <!-- Task 10 -->
+    <div id="siblingGroup">
+        <span>One</span>
+        <span id="target10">Target</span>
+        <span>Two</span>
+    </div>
+
+    <!-- Existing element with class .container (for #11) -->
+    <div class="container">Container element</div>
+
+    <!-- Container for #13 -->
+    <div id="inner-html-container"></div>
+
+    <!-- Paragraph for #14 -->
+    <p id="date-display"></p>
+
+    <!-- Heading for #15 -->
+    <h1 id="heading1">Heading 1</h1>
+
+    <!-- Container for #16 -->
+    <div id="important-container">This is important content.</div>
+
+    <!-- Footer for #17 -->
+    <footer id="page-footer">Page Footer</footer>
+
+    <!-- Container for #18 -->
+    <div id="image-container">
+        <img id="old-image" src="https://via.placeholder.com/150" alt="Old Image" />
+    </div>
+
+    <!-- Article for #19 -->
+    <article id="article1">
+        <h2>Article Title</h2>
+        <p>This is the original article content.</p>
+    </article>
+    <div id="article-destination"></div>
+
+    <!-- Container and button for #20 -->
+    <div id="remove-container">
+        <p id="remove-this">This paragraph will be removed</p>
+    </div>
+    <button id="remove-btn">Remove Paragraph</button>
+
+    <!-- For #21: existing ul with list items -->
+    <ul id="item-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li id="last-item">Item 3 (Last)</li>
+    </ul>
+
+    <!-- For #22: gallery with images -->
+    <div id="gallery">
+        <img src="https://via.placeholder.com/100?text=Img1" alt="Img1"/>
+        <img src="https://via.placeholder.com/100?text=Img2" alt="Img2"/>
+        <img src="https://via.placeholder.com/100?text=Img3" alt="Img3"/>
+    </div>
+
+    <!-- For #23: link to update -->
+    <a href="https://example.com" id="my-link" target="_blank">Visit Example</a>
+
+    <!-- For #24: element with specific class and optional data-id -->
+    <div class="check-data" data-id="123">Check if I have data-id</div>
+    <div class="check-data">I don't have data-id</div>
+    <button id="check-attr-btn">Check data-id attribute</button>
+
+    <!-- For #25: form with disabled buttons and reset -->
+    <form id="my-form">
+        <button disabled type="button">Button 1 (disabled)</button>
+        <button disabled type="button">Button 2 (disabled)</button>
+        <button type="reset" id="reset-btn">Reset</button>
+    </form>
+
+    <!-- For #26: element to change background color -->
+    <div id="color-box"></div>
+    <button id="color-btn">Change Color</button>
+
+    <!-- For #27: element to change multiple styles -->
+    <p id="multi-style">This paragraph will change styles.</p>
+    <button id="style-btn">Change Styles</button>
+
+    <!-- For #28: element to get computed styles -->
+    <div id="size-box" >Size Box</div>
+    <button id="log-size-btn">Log Size</button>
+
+    <!-- For #29: multiple paragraphs for toggle -->
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <button id="toggle-highlight-btn">Toggle Highlight</button>
+
+    <!-- For #30: element to add/remove active class -->
+    <div id="active-box">I will get .active class temporarily</div>
+    <button id="active-btn">Activate for 2 seconds</button>
+    
+    <!-- 31: Event Bubbling & Capturing -->
+    <div id="outer">
+        Outer Div
+        <div id="inner">
+            Inner Div (click me)
+        </div>
+    </div>
+
+    <!-- 32,33,34: Buttons -->
+    <button id="dom0-btn">DOM Level 0 Click</button>
+    <button id="add-listener-btn">addEventListener Click</button>
+    <button id="remove-listener-btn">Click Me Once</button>
+
+    <!-- 35: Mouse coordinates -->
+    <p>Click anywhere on page to log mouse coords</p>
+
+    <!-- 36: Mouseover/mouseout -->
+    <div id="color-div">
+         Hover me
+    </div>
+
+    <!-- 37: Keyboard events -->
+    <input id="key-input" placeholder="Type here..." />
+
+    <!-- 38: Focus events -->
+    <input id="focus-input" placeholder="Focus/Blur me" />
+
+    <!-- 39: Input event -->
+    <input id="live-input" placeholder="Live input display" />
+    <p>Typed value: <span id="display-text"></span></p>
+
+    <!-- 40: Submit event -->
+    <form id="my-form">
+        <input name="username" placeholder="Username" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- 41. Touch Event -->
+    <div id="touch-box">Touch me</div>
+
+    <!-- 42. Countdown Timer -->
+    <div id="countdown">10</div>
+    <button id="start-timer">Start Countdown</button>
+
+    <!-- 43. setTimeout -->
+    <div id="delayed-text">Wait for it...</div>
+
+    <!-- 44. Multiple Event Types -->
+    <div id="multi-event">Click or Double Click me</div>
+
+    <!-- 45. Event Delegation -->
+    <ul id="item-list"></ul>
+    <button id="add-item">Add Item</button>
+
+    <!-- 46. Data Attribute -->
+    <div id="data-box">Click me for data</div>
+
+    <!-- 47. User Input List -->
+    <input id="item-input" placeholder="Item name">
+    <button id="add-to-list">Add</button>
+    <ul id="user-list"></ul>
+
+    <!-- 48. Create & Remove -->
+    <button id="create-temp">Create Temp Element</button>
+    <div id="parent"></div>
+
+    <!-- 49. Animation -->
+    <div id="animate-box"></div>
+
+    <!-- 50. Dynamic Form -->
+    <button id="create-form">Create Form</button>
+    <div id="form-container"></div>
+    <!-- 51. Elements to Clone -->
+    <div class="clone-me">Clone this 1</div>
+    <div class="clone-me">Clone this 2</div>
+    <button onclick="cloneMultiple()">Clone Multiple</button>
+
+    <!-- 52. MutationObserver Target -->
+    <div id="observe-target">Watch me</div>
+    <button onclick="document.getElementById('observe-target').textContent += '!'">Mutate</button>
+
+    <!-- 53. Stop Propagation -->
+    <div onclick="alert('Parent clicked')">
+        <button onclick="event.stopPropagation(); alert('Child clicked')">Click me</button>
+    </div>
+
+    <!-- 54. Form Validation -->
+    <form id="myForm">
+        <input type="text" required placeholder="Required Field">
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- 55. Focus & Blur -->
+    <input id="focusField" placeholder="I will be focused" onblur="console.log('Lost focus')">
+
+    <!-- 56. Dynamic Style Based on User Input -->
+    <input id="colorInput" placeholder="Enter a color">
+    <button onclick="changeColor()">Change Color</button>
+    <div id="colorBox">Color Box</div>
+
+    <!-- 57. scrollIntoView -->
+    <div></div>
+        <button onclick="document.getElementById('scrollTarget').scrollIntoView()">Scroll to target</button>
+    <div id="scrollTarget">Target Element</div>
+
+    <!-- 58. Event Delegation -->
+    <ul id="listContainer"></ul>
+    <button onclick="addListItem()">Add List Item</button>
+
+    <!-- 59. Multi-event -->
+    <div id="multi" style="padding:10px; border:1px solid black;">Hover/Click Me</div>
+
+    <!-- 60. To-do List -->
+    <h3>To-do List</h3>
+    <input id="todoInput" placeholder="Enter item">
+    <button onclick="addTodo()">Add</button>
+    <ul id="todoList"></ul>
+
+    <!-- Task 61 -->
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child" id="child">Click to log parents</div>
+        </div>
+    </div>
+
+    <!-- Task 62 -->
+    <div class="section">
+        <h2>Original 1</h2>
+        <h2>Original 2</h2>
+    </div>
+
+    <!-- Task 63 -->
+    <div id="check-div">
+        <p>Child Element</p>
+    </div>
+
+    <!-- Task 64 -->
+    <button id="toggle-btn">Toggle .active</button>
+    <div id="toggle-target">Target</div>
+
+    <!-- Task 65 -->
+    <div class="remove-attributes" id="removable" title="info" data-info="test">Remove My Attributes</div>
+    <button id="remove-attrs-btn">Remove Attributes</button>
+
+    <!-- Task 66 -->
+    <div id="clone-source">
+        <p>This is a deep element</p>
+        <span>Nested child</span>
+    </div>
+
+    <!-- Task 67 -->
+    <div class="status">Status 1</div>
+    <div class="status">Status 2</div>
+
+    <!-- Task 68 -->
+    <div id="styled-box">Style Me</div>
+    <button id="style-btn">Change Styles</button>
+
+    <!-- Task 69 -->
+    <input type="text" id="search-input" placeholder="Search items..." />
+    <ul id="search-list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Grapes</li>
+    </ul>
+
+    <!-- Task 70 -->
+    <ul id="delegated-ul">
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+
+    <!-- Problem 71: Table container for dynamically generated table -->
+    <div id="table-container"></div>
+
+    <!-- Problem 73: Parent and child elements for modifying parent's border -->
+    <div id="parent-elem">
+        <div id="child-elem">Click me</div>
+    </div>
+
+    <!-- Problem 74: Buttons to test adding event listeners -->
+    <div id="button-wrapper">
+        <button>One</button>
+        <button>Two</button>
+    </div>
+
+    <!-- Problem 75: Form for validation before submitting -->
+    <form id="form-validate">
+        <input type="text" required>
+        <input type="email" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Problem 76: Container to hold a new text node -->
+    <div id="text-node-container"></div>
+
+    <!-- Problem 77: Elements with .highlight class for removal -->
+    <div id="highlight-parent">
+        <div class="highlight">A</div>
+        <div class="highlight">B</div>
+        <div class="highlight">C</div>
+    </div>
+    <button id="remove-highlight">Remove Highlights</button>
+
+    <!-- Problem 78: Items whose font size will be changed -->
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+    <!-- Problem 79: Input and button to update all <p> text -->
+    <input type="text" id="change-text-input" placeholder="Enter new text">
+    <button id="change-text-btn">Change All P Text</button>
+    <p>Old 1</p>
+    <p>Old 2</p>
+
+    <!-- Problem 80: Button to open a modal -->
+    <button id="open-modal">Open Modal</button>
+
+    <!-- 81. Add New Paragraph Based on User Input -->
+    <input type="text" id="inputText81" placeholder="Enter text">
+    <button id="btn81">Add Paragraph</button>
+
+    <!-- 82. Toggle Visibility of Multiple Elements -->
+    <div class="toggle-visibility">Box 1</div>
+    <div class="toggle-visibility">Box 2</div>
+    <button id="btn82">Toggle Visibility</button>
+
+    <!-- 83. Change Text on Hover -->
+    <div id="hoverDiv83">Hover over me</div>
+
+    <!-- 84. Display Mouse Coordinates -->
+    <div id="coords84">X: 0, Y: 0</div>
+
+    <!-- 85. Dynamic Navigation Menu -->
+    <nav id="navMenu85"></nav>
+
+    <!-- 86. Modify Style Based on data-type -->
+    <div id="element86" data-type="warning">Check my background</div>
+
+    <!-- 87. Add New Item to List -->
+    <ul id="list87">
+    <li>Item 1</li>
+    </ul>
+    <button id="btn87">Add Item</button>
+
+    <!-- 88. Mouseenter and Mouseleave -->
+    <div id="hoverBox88">Hover here</div>
+
+    <!-- 89. Smooth Animation with requestAnimationFrame -->
+    <div id="box89" style="position:absolute;">Move Me</div>
+    <button id="btn89">Start Animation</button>
+
+    <!-- 90. Countdown Timer -->
+    <div id="timer90">10</div>
+    <button id="btn90">Start Countdown</button>
+
+    <!-- 91. Use MutationObserver to Detect DOM Changes -->
+    <div id="mutationParent">
+    <button id="addChildBtn">Add Child Element</button>
+    <div id="childrenContainer"></div>
+    </div>
+
+    <!-- 92. Create a Table with Sortable Columns -->
+    <div id="sortableTableContainer"></div>
+
+    <!-- 93. Toggle Between Two Themes Dynamically -->
+    <button id="toggleThemeBtn">Toggle Theme</button>
+    <div id="themeStatus">Current theme: Light</div>
+
+    <!-- 94. Create a Simple To-Do List Application -->
+    <div>
+    <input type="text" id="todoInput" placeholder="Add todo" />
+    <button id="addTodoBtn">Add</button>
+    <ul id="todoList"></ul>
+    </div>
+
+    <!-- 95. Dynamically Change z-index of Element -->
+    <div>
+        <div id="box1">Box 1</div>
+        <div id="box2">Box 2</div>
+    </div>
+    <button id="bringFrontBtn">Bring Box 2 to Front</button>
+
+    <!-- 96. Track Window Resize and Adjust Layout Dynamically -->
+    <div id="resizeBox" >Resize window</div>
+
+    <!-- 97. Handle Keyboard Events for Navigation -->
+    <div id="sections" style="display: flex; gap: 20px;">
+        <section tabindex="0">Section 1</section>
+        <section tabindex="0">Section 2</section>
+        <section tabindex="0">Section 3</section>
+    </div>
+    <div>Use Left/Right Arrow keys to navigate sections.</div>
+
+    <!-- 98. Detect and Handle Clicks Outside an Element -->
+    <div id="outsideContainer">
+        Click inside this box. Click outside to hide me.
+    </div>
+
+    <!-- 99. Implement Infinite Scroll -->
+    <div id="infiniteScrollContainer">
+        <ul id="infiniteList"></ul>
+    </div>
+
+    <!-- 100. Create a Dynamic Gallery with Filters -->
+    <div>
+        <div>
+            <button data-filter="all">All</button>
+            <button data-filter="nature">Nature</button>
+            <button data-filter="city">City</button>
+        </div>
+        <div id="gallery"></div>
+    </div>
+
 </body>
 </html>
